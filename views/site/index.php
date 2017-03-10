@@ -34,7 +34,7 @@ $this->title = 'My Yii Application';
 
                                ?> 
                                 <div style="height: 350px;width:100%;">
-                                <h2>Mobile Phone</h2>
+                                <h2>Mobile Phones</h2>
                                 <hr>
                                 <?php
 
