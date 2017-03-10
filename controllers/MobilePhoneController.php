@@ -12,12 +12,17 @@ use yii;
 use app\models\TblProduct;
 
 /**
+<<<<<<< HEAD
      * class  class name is MobilephoneController and extends controller
      * functions actionReadmobiledata
      
 */
 
 
+=======
+ * MobilephoneController implements the actions for TblProduct model.
+ */
+>>>>>>> f1aff845daa3b3b55dd54c8b73e6448da795e186
 class MobilephoneController extends Controller
 {
 
