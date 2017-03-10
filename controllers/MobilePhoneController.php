@@ -10,6 +10,10 @@ namespace app\controllers;
 use \yii\web\Controller;
 use yii;
 use app\models\TblProduct;
+
+/**
+ * MobilephoneController implements the actions for TblProduct model.
+ */
 class MobilephoneController extends Controller
 {
     public function actionIndex()
