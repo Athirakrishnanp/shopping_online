@@ -10,16 +10,21 @@ namespace app\controllers;
 use \yii\web\Controller;
 use yii;
 use app\models\TblProduct;
+
+/**
+     * class  class name is MobilephoneController and extends controller
+     * functions actionReadmobiledata
+     
+*/
+
+
 class MobilephoneController extends Controller
 {
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
 
     /**
      * actionReadmobiledata its function and calling index page
-     * @param no param
+     * @parm no param
+     * $TblProduct_model its object TblProduct
      * @return its return 'where you going link and two datas,data_mobile_lenovo and data_mobile_moto
      */
 
@@ -34,7 +39,7 @@ class MobilephoneController extends Controller
 
          return $this->render('index', [
             'data_mobile_moto' => $data_mobile_moto,
-            'data_mobile_lenovo' => $data_mobile_lenovo]);	
+            'data_mobile_lenovo' => $data_mobile_lenovo]);  
 
 
     }
