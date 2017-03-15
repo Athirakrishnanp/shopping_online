@@ -7,24 +7,26 @@
 
 
 namespace app\controllers;
+use app\models\Loginrules;
 use \yii\web\Controller;
 use yii;
 use app\models\TblProduct;
 
 /**
-<<<<<<< HEAD
      * class  class name is MobilephoneController and extends controller
      * functions actionReadmobiledata
      
 */
 
-
-=======
- * MobilephoneController implements the actions for TblProduct model.
- */
->>>>>>> f1aff845daa3b3b55dd54c8b73e6448da795e186
 class MobilephoneController extends Controller
 {
+
+ public function actionIndex()
+    {
+        $this->redirect('index.php?r=mobilephone/readmobiledata');
+        //$this->actionMyCustomAction('index.php?r=mobilephone/readmobiledata');
+
+    }
 
     /**
      * actionReadmobiledata its function and calling index page
@@ -41,12 +43,25 @@ class MobilephoneController extends Controller
         $data_mobile_moto=$TblProduct_model->readmobilemoto();
         $data_mobile_lenovo=$TblProduct_model->readmobilelenovo();
         //$data_laptop=$TblProduct_model->readlaptopdata();
+        $model=new loginrules();
 
          return $this->render('index', [
+            'model'=>$model,
             'data_mobile_moto' => $data_mobile_moto,
             'data_mobile_lenovo' => $data_mobile_lenovo]);  
 
+        
+        if($model->load(yii::$app->request->post()) && $model->validate())
+        {
 
+        }
+        else
+        {
+            return $this->render('index',['model'=>$model,
+            'data_mobile_moto' => $data_mobile_moto,
+            'data_mobile_lenovo' => $data_mobile_lenovo]);
+        }
     }
+
 
 }

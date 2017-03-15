@@ -1,5 +1,8 @@
 <?php
 /* @var $this yii\web\View */
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 ?>
 
 <div class="row">
@@ -8,6 +11,17 @@
 
     <h2>Product Filter</h2><hr>
 
+<?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'min') ?>
+
+    <?= $form->field($model, 'max') ?>
+
+    <div class="form-group">
+        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+    </div>
+
+<?php ActiveForm::end(); ?>
 
 
 

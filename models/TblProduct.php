@@ -23,17 +23,8 @@ use Yii;
  */
 class TblProduct extends \yii\db\ActiveRecord
 {
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return 'tbl_product';
-    }
-
-    /**
-     * @inheritdoc
-     */
+   
+ 
     public function rules()
     {
         return [

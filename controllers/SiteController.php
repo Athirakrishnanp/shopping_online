@@ -7,8 +7,11 @@
 
 namespace app\controllers;
 use yii;
+use app\models\Loginrules;
 use app\models\TblProduct;
 use \yii\web\Controller;
+use yii\filters\AccessControl;
+
 
 class SiteController extends Controller
 {
